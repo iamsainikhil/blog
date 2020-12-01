@@ -14,6 +14,9 @@ const Head = ({
   const pageTitle = `${title} | ${page} | ${siteName}`
   const metaDescription =
     description || 'A blog starter template using NextJS and Prismic CMS'
+  const hjid = process.env.NEXT_PUBLIC_HOTJAR_ID
+  const hjsv = process.env.NEXT_PUBLIC_HOTJAR_VERSION
+  const isProd = process.env.NODE_ENV === 'production'
   return (
     <>
       <GoogleFonts href='https://fonts.googleapis.com/css2?family=Damion&family=Fira+Code&family=Lato:ital,wght@0,400;0,700;1,300&display=swap' />
@@ -64,6 +67,21 @@ const Head = ({
         <meta name='msapplication-TileColor' content='#00aba9' />
         <meta name='theme-color' content='#333' />
         <title>{pageTitle}</title>
+        {/* Hotjar Tracking Code */}
+        {isProd ? (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:${hjid},hjsv:${hjsv}};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
+            }}
+          />
+        ) : null}
         {children}
       </NextHead>
     </>

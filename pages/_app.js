@@ -9,8 +9,9 @@ import {initGA, trackGAEvent} from '../utils/googleAnalytics'
 // for more info on measuring app performance
 // visit https://nextjs.org/docs/advanced-features/measuring-performance
 export function reportWebVitals(metric) {
-  initGA()
+  /* Google Analytics */
   const {id, name, label, value} = metric
+  initGA()
   trackGAEvent(
     'Web Vitals',
     'NextJS Custom Metric',
