@@ -5,15 +5,16 @@ const Head = ({
   children,
   pathUrl,
   page = 'Home',
-  title = 'Blog',
+  title = 'Articles',
   description,
   image,
 }) => {
   const twitterHandle = '@iamsainikhil12'
-  const siteName = 'NextJS Prismic Blog Starter'
+  const siteName = 'Blog'
   const pageTitle = `${title} | ${page} | ${siteName}`
   const metaDescription =
-    description || 'A blog starter template using NextJS and Prismic CMS'
+    description ||
+    `Sainikhil's personal blog with many interesting articles related to Web Development, Software Tools, Tips & Tricks, etc.`
   const hjid = process.env.NEXT_PUBLIC_HOTJAR_ID
   const hjsv = process.env.NEXT_PUBLIC_HOTJAR_VERSION
   const isProd = process.env.NODE_ENV === 'production'

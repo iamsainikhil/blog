@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Blog | NextJS Prismic Blog Starter
+  Blog
 </h1>
 
 <p align="center">
