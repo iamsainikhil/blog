@@ -16,7 +16,7 @@ export default {
     highlight: '#9f9f9f',
     gray: '#6c6c6c',
     accent: '#3f3f3f',
-    nextjs: '#352065',
+    nextjs: '#222',
     code: '#fdf6e3',
     shade1: '#d2d2d2',
     shade2: '#e0e0e0',
