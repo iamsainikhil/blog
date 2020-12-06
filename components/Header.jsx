@@ -49,7 +49,7 @@ const Header = ({siteTitle = ''}) => {
             </p> */}
             <p>
               {colorMode === 'light' ? (
-                <Styled.a
+                <span
                   title='Switch to Dark Mode'
                   aria-label='Switch to Dark Mode'>
                   <FiSun
@@ -63,9 +63,9 @@ const Header = ({siteTitle = ''}) => {
                       )
                     }}
                   />
-                </Styled.a>
+                </span>
               ) : (
-                <Styled.a
+                <span
                   title='Switch to Light Mode'
                   aria-label='Switch to Light Mode'>
                   <FiMoon
@@ -79,7 +79,7 @@ const Header = ({siteTitle = ''}) => {
                       )
                     }}
                   />
-                </Styled.a>
+                </span>
               )}
             </p>
           </div>
