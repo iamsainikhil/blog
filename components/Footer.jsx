@@ -79,8 +79,8 @@ const Footer = () => {
           />{' '}
           and{' '}
           <picture className='prismic-icon'>
-            <source type='image/webp' srcset='/prismic-icon.webp' />
-            <source type='image/jpeg' srcset='/prismic-icon.jpg' />
+            <source type='image/webp' srcSet='/prismic-icon.webp' />
+            <source type='image/jpeg' srcSet='/prismic-icon.jpg' />
             <img
               src='/prismic-icon.jpg'
               alt='Prismic'
