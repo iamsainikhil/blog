@@ -84,6 +84,10 @@ const Head = ({
             }}
           />
         ) : null}
+        <script
+          async
+          defer
+          src='https://static.cdn.prismic.io/prismic.js?new=true&repo=iamsainikhil-blog'></script>
         {children}
       </NextHead>
     </>

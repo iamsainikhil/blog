@@ -24,7 +24,6 @@ const truncateText = (text) => {
 }
 
 const Listing = ({articles}) => {
-  console.log(articles)
   const {theme} = useThemeUI()
 
   const GridLayout = styled.div`
