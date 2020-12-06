@@ -71,6 +71,7 @@ const Head = ({
         {/* Hotjar Tracking Code */}
         {isProd ? (
           <script
+            async
             dangerouslySetInnerHTML={{
               __html: `(function(h,o,t,j,a,r){
                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};

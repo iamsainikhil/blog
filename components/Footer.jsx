@@ -78,13 +78,17 @@ const Footer = () => {
             title='NextJS'
           />{' '}
           and{' '}
-          <img
-            src='/prismic-icon.png'
-            alt='Prismic'
-            aria-label='Prismic'
-            title='Prismic'
-            className='prismic-icon'
-          />
+          <picture className='prismic-icon'>
+            <source type='image/webp' srcset='/prismic-icon.webp' />
+            <source type='image/jpeg' srcset='/prismic-icon.jpg' />
+            <img
+              src='/prismic-icon.jpg'
+              alt='Prismic'
+              aria-label='Prismic'
+              title='Prismic'
+              className='prismic-icon'
+            />
+          </picture>
         </div>
 
         <div className='social-row'>
