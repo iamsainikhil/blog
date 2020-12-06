@@ -72,6 +72,7 @@ const Head = ({
         {isProd ? (
           <script
             async
+            defer
             dangerouslySetInnerHTML={{
               __html: `(function(h,o,t,j,a,r){
                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};

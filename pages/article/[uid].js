@@ -177,7 +177,7 @@ export async function getStaticProps({
   // get authorID
   const authorId = await article?.author?.id
   // fetch author data based on authorId
-  const {data: author} = await client.getByID(authorId)
+  const {data: author} = await client.getByID(authorId, ref ? {ref} : null)
   const {results: articles} = await client.query(
     Prismic.Predicates.at('document.type', 'article')
   )
