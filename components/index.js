@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic'
-import SliceZone from './SliceZone'
+import SliceMachine from './SliceMachine'
 
 const Layout = dynamic(() => import('./Layout'))
 const Head = dynamic(() => import('./Head'))
@@ -20,7 +20,7 @@ export {
   Header,
   Listing,
   Footer,
-  SliceZone,
+  SliceMachine,
   Caption,
   Chip,
   Icon,
