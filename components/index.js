@@ -1,6 +1,5 @@
 import dynamic from 'next/dynamic'
 import Loader from './Loader'
-import SliceMachine from './SliceMachine'
 
 const Layout = dynamic(() => import('./Layout'), {
   loading: Loader,
@@ -27,6 +26,9 @@ const DisqusComments = dynamic(() => import('./DisqusComments'), {
   loading: Loader,
 })
 const RelatedArticles = dynamic(() => import('./RelatedArticles'), {
+  loading: Loader,
+})
+const SliceMachine = dynamic(() => import('./SliceMachine'), {
   loading: Loader,
 })
 
