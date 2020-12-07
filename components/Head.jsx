@@ -69,7 +69,7 @@ const Head = ({
         <meta name='theme-color' content='#333' />
         <title>{pageTitle}</title>
         {/* Hotjar Tracking Code */}
-        {isProd ? (
+        {/* {isProd ? (
           <script
             async
             defer
@@ -84,7 +84,7 @@ const Head = ({
             })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
             }}
           />
-        ) : null}
+        ) : null} */}
         <script
           async
           defer
