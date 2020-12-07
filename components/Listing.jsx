@@ -150,7 +150,7 @@ const Listing = ({articles}) => {
                     )
                   }
                   rel='noreferrer noopener'>
-                  Read More
+                  Read Full Article
                 </a>
               </NextLink>
             </p>
