@@ -18,6 +18,7 @@ export function reportWebVitals(metric) {
     name,
     Math.round(name === 'CLS' ? value * 1000 : value)
   )
+  console.clear()
 }
 
 function MyApp({Component, pageProps}) {
