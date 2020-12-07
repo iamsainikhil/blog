@@ -1,25 +1,38 @@
 import dynamic from 'next/dynamic'
+import Loader from './Loader'
 import SliceMachine from './SliceMachine'
 
-const Layout = dynamic(() => import('./Layout'))
-const Head = dynamic(() => import('./Head'))
-const Header = dynamic(() => import('./Header'))
-const Listing = dynamic(() => import('./Listing'))
-const Footer = dynamic(() => import('./Footer'))
-const Caption = dynamic(() => import('./Caption'))
-const Chip = dynamic(() => import('./Chip'))
-const Icon = dynamic(() => import('./Icon'))
-const Author = dynamic(() => import('./Author'))
-const Share = dynamic(() => import('./Share'))
-const DisqusComments = dynamic(() => import('./DisqusComments'))
-const RelatedArticles = dynamic(() => import('./RelatedArticles'))
+const Layout = dynamic(() => import('./Layout'), {
+  loading: Loader,
+})
+const Listing = dynamic(() => import('./Listing'), {
+  loading: Loader,
+})
+const Caption = dynamic(() => import('./Caption'), {
+  loading: Loader,
+})
+const Chip = dynamic(() => import('./Chip'), {
+  loading: Loader,
+})
+const Icon = dynamic(() => import('./Icon'), {
+  loading: Loader,
+})
+const Author = dynamic(() => import('./Author'), {
+  loading: Loader,
+})
+const Share = dynamic(() => import('./Share'), {
+  loading: Loader,
+})
+const DisqusComments = dynamic(() => import('./DisqusComments'), {
+  loading: Loader,
+})
+const RelatedArticles = dynamic(() => import('./RelatedArticles'), {
+  loading: Loader,
+})
 
 export {
   Layout,
-  Head,
-  Header,
   Listing,
-  Footer,
   SliceMachine,
   Caption,
   Chip,
