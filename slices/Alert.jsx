@@ -12,11 +12,12 @@ const Alert = ({data: {primary}}) => {
         py: 2,
         px: 3,
         backgroundColor: `${primary.type}`,
-        color: '#222',
+        color: 'text',
         borderLeftWidth: '4px',
         borderLeftStyle: 'solid',
         borderLeftColor: `${primary.type}Border`,
         fontSize: [1, 2],
+        variant: 'styles',
       }}>
       <RichText render={primary.content} htmlSerializer={htmlSerializer} />
     </div>
