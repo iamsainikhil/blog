@@ -31,7 +31,7 @@ export default {
     dangerBorder: '#F87171',
     modes: {
       dark: {
-        text: '#c1bdb8',
+        text: '#ECE7E0',
         background: '#161819',
         primary: '#d2d2d2',
         secondary: '#b2b2b2',
