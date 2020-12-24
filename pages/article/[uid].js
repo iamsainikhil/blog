@@ -49,12 +49,14 @@ export default function Article({uid, tags, article, author, articles}) {
         <Styled.h1 sx={{textAlign: 'center', mb: 3}}>
           {RichText.asText(article.title)}
         </Styled.h1>
-        <p
+        <div
           sx={{
             fontWeight: 'bold',
             my: 0,
             pt: 0,
-            textAlign: 'center',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
             position: 'relative',
           }}>
           <Styled.em
@@ -69,38 +71,42 @@ export default function Article({uid, tags, article, author, articles}) {
             <FiClock style={{marginBottom: '-0.15rem'}} />
             &nbsp;{article.read_time}&nbsp;min read
           </Styled.em>
-          <FiShare2
-            sx={{
-              fontSize: [3],
-              mx: 2,
-              mb: -1,
-              ':hover': {cursor: 'pointer'},
-            }}
-            title={`Share ${RichText.asText(
-              article.title
-            )} article on different platforms.`}
-            onMouseEnter={toggleShareIcons}
-            onClick={toggleShareIcons}
-          />
-          {/* Share */}
-          {showShareIcons && (
-            <div
+          <p sx={{m: 0}}>
+            <FiShare2
               sx={{
-                position: 'absolute',
-                right: 0,
-                top: 0,
-                mt: '-0.3rem',
-                mr: '9rem',
+                fontSize: [3],
+                mx: 2,
+                mb: -1,
+                ':hover': {cursor: 'pointer'},
               }}
-              onMouseLeave={toggleShareIcons}>
-              <Share
-                articleURL={URL}
-                articleName={RichText.asText(article.title)}
-                hideShareText={true}
-              />
-            </div>
-          )}
-        </p>
+              title={`Share ${RichText.asText(
+                article.title
+              )} article on different platforms.`}
+              onMouseEnter={toggleShareIcons}
+              onClick={toggleShareIcons}
+            />
+            {/* Share */}
+            {showShareIcons && (
+              <div
+                sx={{
+                  position: 'absolute',
+                  mt: '-2rem',
+                  ml: '2rem',
+                  '@media screen and (max-width: 40rem)': {
+                    mt: '-2rem',
+                    ml: '2.5rem',
+                  },
+                }}
+                onMouseLeave={toggleShareIcons}>
+                <Share
+                  articleURL={URL}
+                  articleName={RichText.asText(article.title)}
+                  hideShareText={true}
+                />
+              </div>
+            )}
+          </p>
+        </div>
 
         {/* categories */}
         <div
