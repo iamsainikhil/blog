@@ -2,32 +2,34 @@
 /** @jsx jsx */
 import {jsx} from 'theme-ui'
 import dynamic from 'next/dynamic'
+import Lottie from 'react-lottie'
 import Loader from '../components/Loader'
+import animationData from '../public/404_animation.json'
 const Layout = dynamic(() => import('../components/Layout'), {
   loading: Loader,
 })
 
 export default function Custom404() {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid meet',
+    },
+  }
+
   return (
     <Layout title='Page Not Found' page='404'>
       <div
         sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          flexDirection: 'column',
-          textAlign: 'center',
-          fontSize: [3, 4],
+          position: 'absolute',
+          marginTop: '-2rem',
+          zIndex: 10,
+          left: 0,
+          right: 0,
         }}>
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-        <picture className='pnf-image'>
-          <source type='image/webp' srcSet='/page-not-found.webp' />
-          <source type='image/jpeg' srcSet='/page-not-found.jpg' />
-          <img
-            src='/page-not-found.jpg'
-            alt='404 Page Not Found'
-            className='pnf-image'
-          />
-        </picture>
+        <Lottie options={defaultOptions} />
       </div>
     </Layout>
   )

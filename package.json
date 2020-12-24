@@ -26,6 +26,7 @@
     "react-headroom": "^3.0.1",
     "react-icons": "^4.1.0",
     "react-images": "^1.1.7",
+    "react-lottie": "^1.2.3",
     "react-snakke": "^1.2.3",
     "react-toastify": "^6.1.0",
     "sass": "^1.29.0",
