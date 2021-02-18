@@ -51,7 +51,7 @@ Therefore the starter has following features:
   - Favicons
 - Offline Support
 - WebApp Manifest Support
-- NextJS optimized google fonts (nextjs-google-fonts)
+- NextJS optimized google fonts
 - Configurable
 
   - Use the `next-config.js` & `layout.jsx` to easily change the most important information
@@ -317,11 +317,10 @@ A list of packages used in this starter project.
 8. **`react-images`:** A mobile-friendly, highly customizable, carousel component for displaying media in ReactJS. For more info, check [here](https://github.com/jossmac/react-images).
 9. **`react-snakke`:** Reading position indicator for React used to display the progress of the article as you scroll down the page. For more info, check [here](https://github.com/diogomoretti/react-snakke). This is one of the package which can be completely avoidable if you don't want it 😄.
 10. **`react-toastify`:** React notification made easy. This is used to notify users of which code block they copied to clipboard used in Code slice `src/slices/Code.jsx`. For more info, check [here](https://github.com/fkhadra/react-toastify).
-11. **`disqus-react`:** A plugin that simplifies adding DISQUS comments to your Gatsby website. For more info, check [here](https://www.gatsbyjs.org/packages/gatsby-plugin-disqus/).
-12. **`next-google-fonts`:** A simple plugin for loading Google Fonts fast and asynchronously. For more info, check [here](https://github.com/joe-bell/next-google-fonts)
-13. **`next-pwa`:** A simple plugin to add PWA support for NextJS app. For more info, check [here](https://github.com/shadowwalker/next-pwa)
-14. **`prismic-javascript`:** JavaScript development for prismic.io API v2. For more info, check [here](https://github.com/prismicio/prismic-javascript)
-15. **`prismic-reactjs`:** A simple utility to render Rich Text with Prismic API V2. For more info, check [here](https://github.com/prismicio/prismic-reactjs)
+11. **`disqus-react`:** A plugin that simplifies adding DISQUS comments to your Gatsby website. For more info, check [here](https://www.gatsbyjs.org/packages/gatsby-plugin-disqus/).next-google-fonts)
+12. **`next-pwa`:** A simple plugin to add PWA support for NextJS app. For more info, check [here](https://github.com/shadowwalker/next-pwa)
+13. **`prismic-javascript`:** JavaScript development for prismic.io API v2. For more info, check [here](https://github.com/prismicio/prismic-javascript)
+14. **`prismic-reactjs`:** A simple utility to render Rich Text with Prismic API V2. For more info, check [here](https://github.com/prismicio/prismic-reactjs)
 
 # ⛏️ Customization
 

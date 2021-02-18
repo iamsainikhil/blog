@@ -12,7 +12,6 @@
     "dayjs": "^1.9.6",
     "disqus-react": "^1.0.10",
     "next": "10.0.3",
-    "next-google-fonts": "^1.2.1",
     "next-pwa": "^3.1.5",
     "prism-react-renderer": "^1.1.1",
     "prismic-javascript": "^3.0.2",
