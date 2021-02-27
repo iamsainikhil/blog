@@ -40,7 +40,7 @@ Therefore the starter has following features:
 - Prismic as Headless CMS
 - [Theme UI](https://theme-ui.com/home) for styling
 - Prism React Renderer plugin using PrismJS highlighting
-- Responsive images (gatsby-image)
+- Responsive images (next-image)
   - The right image size for every screen size
   - Traced SVG Loading (Lazy-Loading)
   - WebP Support
