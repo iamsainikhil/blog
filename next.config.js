@@ -1,6 +1,6 @@
 const withPWA = require('next-pwa')
 
-module.exports = withPWA({
+;(module.exports = withPWA({
   // for more PWA options
   // visit https://www.npmjs.com/package/next-pwa#available-options
   pwa: {
@@ -32,4 +32,7 @@ module.exports = withPWA({
     // a non-locale prefixed path e.g. `/hello`
     defaultLocale: 'en-US',
   },
-})
+})),
+  {
+    crossOrigin: 'anonymous',
+  }
