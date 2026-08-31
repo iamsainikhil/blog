@@ -1,15 +1,12 @@
-const withPWA = require('next-pwa')
+const withPWA = require('next-pwa')({
+  disable: process.env.NODE_ENV === 'development',
+  register: true,
+  scope: '/',
+  sw: 'service-worker.js',
+  dest: 'public',
+})
 
-;(module.exports = withPWA({
-  // for more PWA options
-  // visit https://www.npmjs.com/package/next-pwa#available-options
-  pwa: {
-    disable: process.env.NODE_ENV === 'development',
-    register: true,
-    scope: '/',
-    sw: 'service-worker.js',
-    dest: 'public',
-  },
+module.exports = withPWA({
   // To enable image optimization for image hosted on external website
   // mention the external website domain below
   // for more info, visit https://nextjs.org/docs/basic-features/image-optimization#domains
@@ -32,7 +29,4 @@ const withPWA = require('next-pwa')
     // a non-locale prefixed path e.g. `/hello`
     defaultLocale: 'en-US',
   },
-})),
-  {
-    crossOrigin: 'anonymous',
-  }
+})
