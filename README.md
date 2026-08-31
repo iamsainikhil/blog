@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://nextjs-prismic-blog-starter.vercel.app/">
+  <a href="https://blog.iamsainikhil.com">
     <img alt="NextJS" src="https://github.com/iamsainikhil/nextjs-prismic-blog-starter/raw/master/README_images/nextjs_prismic.png" width="300" />
   </a>
 </p>
