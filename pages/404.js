@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import {jsx} from 'theme-ui'
 import dynamic from 'next/dynamic'
 import Loader from '../components/Loader'
 import animationData from '../public/404_animation.json'

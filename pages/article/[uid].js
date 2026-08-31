@@ -1,10 +1,8 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
 import {Fragment, useState} from 'react'
-import {jsx, Styled} from 'theme-ui'
 import {client} from '../../prismic-configuration'
 import {RichText} from 'prismic-reactjs'
 import Prismic from 'prismic-javascript'
+import Styled from '../../components/Styled'
 import {
   Layout,
   SliceMachine,

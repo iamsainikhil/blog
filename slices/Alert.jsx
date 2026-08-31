@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import {jsx} from 'theme-ui'
 import {RichText} from 'prismic-reactjs'
 import htmlSerializer from '../utils/htmlSerializer'
 

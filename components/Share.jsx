@@ -1,6 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import {jsx, Styled} from 'theme-ui'
+import Styled from './Styled'
 import PropTypes from 'prop-types'
 import Icon from './Icon'
 import {FiShare2} from 'react-icons/fi'

@@ -1,6 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import {jsx, Styled} from 'theme-ui'
+import Styled from './Styled'
 
 const Caption = ({name, type}) => {
   return (

@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import {jsx} from 'theme-ui'
 import PropTypes from 'prop-types'
 import {DiscussionEmbed} from 'disqus-react'
 import siteUrl from '../utils/siteUrl'

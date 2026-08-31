@@ -1,7 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
 import {Fragment} from 'react'
-import {jsx} from 'theme-ui'
 import PropTypes from 'prop-types'
 import Listing from './Listing'
 
