@@ -1,4 +1,4 @@
-import {useState, Fragment} from 'react'
+import {useState, useEffect, Fragment} from 'react'
 import Highlight, {defaultProps} from 'prism-react-renderer'
 import light from 'prism-react-renderer/themes/github'
 import dark from 'prism-react-renderer/themes/vsDark'
@@ -24,6 +24,11 @@ import {RichText} from 'prismic-reactjs'
 const Code = ({data: {primary}}) => {
   const {theme, colorMode} = useThemeUI()
   const [copied, setCopied] = useState(false)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   /**
    * Toast
@@ -64,7 +69,7 @@ const Code = ({data: {primary}}) => {
     <Fragment>
       <Highlight
         {...defaultProps}
-        theme={colorMode === 'light' ? light : dark}
+        theme={mounted && colorMode === 'light' ? light : dark}
         code={RichText.asText(primary.code)}
         language={primary.lang}>
         {({className, style, tokens, getLineProps, getTokenProps}) => (

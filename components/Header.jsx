@@ -1,13 +1,20 @@
+import {useEffect, useState} from 'react'
 import {default as NextLink} from 'next/link'
 import PropTypes from 'prop-types'
 import Headroom from 'react-headroom'
-import {Styled, useThemeUI} from 'theme-ui'
+import {useThemeUI} from 'theme-ui'
+import Styled from './Styled'
 // import { GoSearch } from "react-icons/go"
 import {FiSun, FiMoon} from 'react-icons/fi'
 import {trackGAEvent} from '../utils/googleAnalytics'
 
 const Header = ({siteTitle = ''}) => {
   const {theme, colorMode, setColorMode} = useThemeUI()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   return (
     <Headroom disableInlineStyles upTolerance={10} downTolerance={10}>
@@ -15,7 +22,7 @@ const Header = ({siteTitle = ''}) => {
         <div className='header-content'>
           <div>
             <Styled.h1 style={{margin: '0'}}>
-              <NextLink href='/' passHref>
+              <NextLink href='/' legacyBehavior passHref>
                 <Styled.a
                   style={{
                     textDecoration: 'none',
@@ -48,7 +55,7 @@ const Header = ({siteTitle = ''}) => {
               />
             </p> */}
             <p>
-              {colorMode !== 'dark' ? (
+              {mounted && colorMode !== 'dark' ? (
                 <span
                   title='Switch to Dark Mode'
                   aria-label='Switch to Dark Mode'>
@@ -64,7 +71,7 @@ const Header = ({siteTitle = ''}) => {
                     }}
                   />
                 </span>
-              ) : (
+              ) : mounted ? (
                 <span
                   title='Switch to Light Mode'
                   aria-label='Switch to Light Mode'>
@@ -80,6 +87,8 @@ const Header = ({siteTitle = ''}) => {
                     }}
                   />
                 </span>
+              ) : (
+                <span />
               )}
             </p>
           </div>
