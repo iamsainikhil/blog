@@ -1,7 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import {jsx} from 'theme-ui'
-import {SiNextDotJs} from 'react-icons/si'
+import {SiNextdotjs} from 'react-icons/si'
 import {FaHeart} from 'react-icons/fa'
 import Icon from './Icon'
 import {trackGAEvent} from '../utils/googleAnalytics'
@@ -69,7 +66,7 @@ const Footer = () => {
             title='Love'
           />{' '}
           using{' '}
-          <SiNextDotJs
+          <SiNextdotjs
             sx={{
               color: 'text',
               marginBottom: '-0.25rem',
@@ -111,8 +108,8 @@ const Footer = () => {
           />
 
           <Icon
-            name='Medium'
-            url='https://medium.com/@iamsainikhil'
+            name='GitHub'
+            url='https://github.com/iamsainikhil'
             style={{
               color: 'primary',
               fontSize: '1.5rem',
