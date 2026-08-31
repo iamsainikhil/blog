@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import {jsx} from 'theme-ui'
 import Image from 'next/image'
 import PropTypes from 'prop-types'
 
@@ -21,9 +18,10 @@ const Banner = ({image: {alt, url, dimensions}}) => {
         src={url}
         alt={alt}
         title={alt}
-        layout='responsive'
         width={dimensions.width}
         height={dimensions.height}
+        sizes='100vw'
+        style={{width: '100%', height: 'auto'}}
       />
 
       <p

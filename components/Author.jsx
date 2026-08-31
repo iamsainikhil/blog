@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import {jsx} from 'theme-ui'
 import PropTypes from 'prop-types'
 import Icon from './Icon'
 import Image from 'next/image'
@@ -38,9 +35,9 @@ const Author = ({author}) => {
         src={author.avatar.url}
         alt={author.avatar.alt}
         title={author.avatar.alt}
-        layout='fixed'
-        width='100'
-        height='100'
+        width={100}
+        height={100}
+        style={{width: '100px', height: '100px'}}
         className='author-avatar'
       />
       <div>

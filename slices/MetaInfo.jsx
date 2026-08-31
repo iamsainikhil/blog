@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import {jsx} from 'theme-ui'
 import PropTypes from 'prop-types'
 import Image from 'next/image'
 import {RichText} from 'prismic-reactjs'
@@ -42,9 +39,9 @@ const MetaInfo = ({meta}) => {
           src={meta.website_image.url}
           alt={meta.website_image.alt}
           title={meta.website_image.alt}
-          layout='fixed'
-          width='200'
-          height='100'
+          width={200}
+          height={100}
+          style={{width: '200px', height: '100px'}}
           className='meta-image'
         />
       </div>

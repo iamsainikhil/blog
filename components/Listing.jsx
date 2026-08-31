@@ -1,6 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import {jsx, useThemeUI} from 'theme-ui'
+import {useThemeUI} from 'theme-ui'
 import PropTypes from 'prop-types'
 import {default as NextLink} from 'next/link'
 import {hrefResolver, linkResolver} from './../prismic-configuration'
@@ -60,15 +58,16 @@ const Listing = ({articles}) => {
             <NextLink
               href={hrefResolver(article)}
               as={linkResolver(article)}
-              passHref>
+              legacyBehavior>
               <a>
                 <Image
                   src={article.data.article_image.url}
                   alt={article.data.article_image.alt}
                   title={article.data.article_image.alt}
-                  layout='responsive'
                   width={article.data.article_image.dimensions.width}
                   height={article.data.article_image.dimensions.height}
+                  sizes='325px'
+                  style={{width: '100%', height: 'auto'}}
                   className='article-image'
                 />
               </a>
@@ -97,7 +96,7 @@ const Listing = ({articles}) => {
               <NextLink
                 href={hrefResolver(article)}
                 as={linkResolver(article)}
-                passHref>
+                legacyBehavior>
                 <a
                   sx={{
                     color: 'inherit',
@@ -133,7 +132,7 @@ const Listing = ({articles}) => {
               <NextLink
                 href={hrefResolver(article)}
                 as={linkResolver(article)}
-                passHref>
+                legacyBehavior>
                 <a
                   sx={{variant: 'styles.a'}}
                   aria-label={`Read the article on ${RichText.asText(

@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import {jsx} from 'theme-ui'
 import PropTypes from 'prop-types'
 import {default as NextLink} from 'next/link'
 import {hrefResolver, linkResolver} from './../prismic-configuration'
@@ -17,7 +14,7 @@ const Chip = ({name, slug, type, page = 'article'}) => {
       <NextLink
         href={hrefResolver({type, uid: slug})}
         as={linkResolver({type, uid: slug})}
-        passHref>
+        legacyBehavior>
         <a
           sx={{
             textDecoration: 'none',

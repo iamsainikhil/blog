@@ -1,7 +1,5 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
 import {Fragment, useState} from 'react'
-import {jsx, useThemeUI} from 'theme-ui'
+import {useThemeUI} from 'theme-ui'
 import Carousel, {Modal, ModalGateway} from 'react-images'
 import PropTypes from 'prop-types'
 import Image from 'next/image'
@@ -87,9 +85,10 @@ const Gallery = ({data: {items}}) => {
             src={items[0].image.url}
             alt={items[0].image.alt}
             title={items[0].image.alt}
-            layout='responsive'
             width={items[0].image.dimensions.width}
             height={items[0].image.dimensions.height}
+            sizes='100vw'
+            style={{width: '100%', height: 'auto'}}
           />
         )}
         <p
